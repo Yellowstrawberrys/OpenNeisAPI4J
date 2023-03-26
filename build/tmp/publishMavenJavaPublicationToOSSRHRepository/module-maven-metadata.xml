@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>me.yellowstrawberry</groupId>
+  <artifactId>OpenNeisAPI4J</artifactId>
+  <versioning>
+    <latest>0.0.2</latest>
+    <release>0.0.2</release>
+    <versions>
+      <version>0.0.2</version>
+    </versions>
+    <lastUpdated>20230326050755</lastUpdated>
+  </versioning>
+</metadata>

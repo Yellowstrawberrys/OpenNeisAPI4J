@@ -15,10 +15,22 @@ public enum SchoolType {
         this.english = english;
     }
 
+    /**
+     * 학교 종류의 이름을 가져옵니다.
+     * (예시: "초등학교", "중학교")
+     * @return 이름
+     * @since 0.0.1
+     * */
     public String getKoreanName() {
         return korean;
     }
 
+    /**
+     * 학교 종류의 영문이름을 가져옵니다.
+     * (예시: "Middle School", "High School")
+     * @return 영문이름
+     * @since 0.0.1
+     * */
     public String getEnglishName() {
         return english;
     }

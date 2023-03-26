@@ -1,12 +1,10 @@
 package me.yellowstrawberry.openneisapi;
 
 import me.yellowstrawberry.openneisapi.exception.NeisException;
+import me.yellowstrawberry.openneisapi.objects.food.SchoolMeal;
 import me.yellowstrawberry.openneisapi.objects.schedule.Period;
 import me.yellowstrawberry.openneisapi.objects.schedule.PeriodType;
-import me.yellowstrawberry.openneisapi.objects.school.ElementarySchool;
-import me.yellowstrawberry.openneisapi.objects.school.HighSchool;
-import me.yellowstrawberry.openneisapi.objects.school.MiddleSchool;
-import me.yellowstrawberry.openneisapi.objects.school.School;
+import me.yellowstrawberry.openneisapi.objects.school.*;
 import me.yellowstrawberry.openneisapi.objects.school.enums.SchoolType;
 import okhttp3.*;
 import org.json.JSONArray;
@@ -42,6 +40,7 @@ public class ONA {
      *
      * @param name 학교 이름
      * @throws NeisException 나이스 교육 정보 개방 포털에서 오류를 리턴했을때
+     * @since 0.0.1
      */
     public School[] searchSchool(String name) throws IOException {
         return searchSchool(name, 5);
@@ -54,6 +53,7 @@ public class ONA {
      *
      * @param name     학교 이름
      * @param maxIndex 최대 개수
+     * @since 0.0.1
      */
     public School[] searchSchool(String name, int maxIndex) throws IOException {
         List<School> schools = new ArrayList<>();
@@ -66,6 +66,8 @@ public class ONA {
             SchoolType type = SchoolType.parseSchoolType(obj.getString("SCHUL_KND_SC_NM"));
             if (type == SchoolType.Elementary) schools.add(ElementarySchool.parseFromJSONObject(obj));
             else if (type == SchoolType.Middle) schools.add(MiddleSchool.parseFromJSONObject(obj));
+            else if (type == SchoolType.High) schools.add(HighSchool.parseFromJSONObject(obj));
+            else if (type == SchoolType.Special) schools.add(SpecialSchool.parseFromJSONObject(obj));
         }
 
         return schools.toArray(new School[]{});
@@ -83,6 +85,7 @@ public class ONA {
      * @param to        시간표를 가져올 마지막날
      * @return 시간표
      * @throws DateTimeException 시간이 틀렸을때
+     * @since 0.0.1
      */
     public Period[][] getSchedule(School school, int grade, String className, LocalDateTime from, LocalDateTime to) throws IOException {
         if (from.isBefore(to)) throw new DateTimeException("'from' should be before 'to'.");
@@ -106,6 +109,7 @@ public class ONA {
      * @param className 반
      * @param date      날짜
      * @return 시간표
+     * @since 0.0.1
      */
     public Period[] getScheduleOfDay(School school, int grade, String className, Date date) throws IOException {
         List<Period> periods = new ArrayList<>();
@@ -130,6 +134,27 @@ public class ONA {
         }
 
         return periods.toArray(new Period[]{});
+    }
+
+    /**
+     * <strong>급식 가져오기</strong>
+     *
+     * 나이스 교육정보 개방 포털에서 급식를 불러옵니다.
+     *
+     * @param school 학교
+     * @param date 날짜
+     * @return 급식
+     * @since 0.0.2
+     * */
+    public SchoolMeal getMealOfDay(School school, Date date) throws IOException {
+        JSONObject obj = get(
+                "/mealServiceDietInfo",
+                QueryParameter.of("ATPT_OFCDC_SC_CODE", school.getEducationDepartment().code()),
+                QueryParameter.of("SD_SCHUL_CODE", school.getCode()),
+                QueryParameter.of("MLSV_YMD", School.format.format(date))
+        ).getJSONArray("mealServiceDietInfo").getJSONObject(1).getJSONArray("row").getJSONObject(0);
+
+        return new SchoolMeal(obj);
     }
 
     private JSONObject get(String path, QueryParameter... params) throws IOException {

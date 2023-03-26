@@ -18,30 +18,35 @@ public interface School {
      * <strong>학교 이름</strong>
      *
      * @return 학교 이름
+     * @since  0.0.1
      * */
     String getName();
     /**
      * <strong>학교 영문 이름</strong>
      *
      * @return 학교 영문 이름
+     * @since  0.0.1
      * */
     String getEnglishName();
     /**
      * <strong>학교 코드</strong>
      *
      * @return 학교 코드
+     * @since  0.0.1
      * */
     String getCode();
     /**
      * <strong>학교 설립일</strong>
      *
      * @return 학교 설립일
+     * @since  0.0.1
      * */
     Date getFoundingDate();
     /**
      * <strong>학교 개교 기념일</strong>
      *
      * @return 학교 개교 기념일
+     * @since  0.0.1
      * */
     Date getAnniversaryDate();
 
@@ -49,6 +54,7 @@ public interface School {
      * <strong>학교 종류</strong>
      *
      * @return 학교 종류
+     * @since  0.0.1
      * */
     SchoolType getType();
     /**
@@ -63,6 +69,7 @@ public interface School {
      * Location#localEducationDepartment -> 관할 지역 교육청
      *
      * @return Location
+     * @since  0.0.1
      * */
     Location getLocation();
     /**
@@ -75,12 +82,14 @@ public interface School {
      * Contact#website -> 웹사이트 주소
      *
      * @return Contact
+     * @since  0.0.1
      * */
     Contact getContact();
     /**
      * <strong>관할 시/도 교육청</strong>
      *
      * @return EducationDepartment
+     * @since  0.0.1
      * */
     EducationDepartment getEducationDepartment();
 
@@ -88,18 +97,21 @@ public interface School {
      * <strong>남자 여자 공학 구분</strong>
      *
      * @return GenderType
+     * @since  0.0.1
      * */
     GenderType getGenderType();
     /**
      * <strong>입시 시기</strong>
      * (전기, 후기)
      * @return EntranceExam
+     * @since  0.0.1
      * */
     EntranceExam getPeroidOfEntranceExam();
     /**
      * <strong>운영시기</strong>
      * (주간, 야간)
      * @return OperatingPeriod
+     * @since  0.0.1
      * */
     OperatingPeriod getOperatingPeriod();
 
@@ -107,6 +119,7 @@ public interface School {
      * <strong>정보 마지막 업데이트</strong>
      *
      * @return date
+     * @since  0.0.1
      * */
     Date lastUpdate();
 }

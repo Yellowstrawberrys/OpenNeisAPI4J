@@ -1,2 +1,4 @@
 Manifest-Version: 1.0
+Implementation-Title: OpenNeisAPI4J
+Implementation-Version: 0.0.2
 

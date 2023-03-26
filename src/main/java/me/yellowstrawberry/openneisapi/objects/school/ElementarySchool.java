@@ -14,6 +14,7 @@ import java.util.Date;
 
 /**
  * <strong>초등학교</strong>
+ * @since 0.0.1
  * */
 public class ElementarySchool implements School {
 

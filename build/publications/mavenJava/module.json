@@ -1,0 +1,116 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "me.yellowstrawberry",
+    "module": "OpenNeisAPI4J",
+    "version": "0.0.2",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "7.5.1"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 17,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "files": [
+        {
+          "name": "OpenNeisAPI4J-0.0.2.jar",
+          "url": "OpenNeisAPI4J-0.0.2.jar",
+          "size": 34809,
+          "sha512": "70029f37d906443fa8d3c7ac6c6d7e464adb95c551af687eb94be368c9433034c87bd30a495926c63f5f94e5e57eb2a4526e2acd5a455fefb207c1526a933218",
+          "sha256": "c6dfa99133337651f0bc8cd135469151ab2b0c0b1be423aca931c7f6c650f9ae",
+          "sha1": "b48e475430919d48bf0ab7bbf174ce501e95aaa9",
+          "md5": "0d12874732255efff428b3ca8e6093f9"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 17,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "com.squareup.okhttp3",
+          "module": "okhttp",
+          "version": {
+            "requires": "5.0.0-alpha.11"
+          }
+        },
+        {
+          "group": "org.json",
+          "module": "json",
+          "version": {
+            "requires": "20230227"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "OpenNeisAPI4J-0.0.2.jar",
+          "url": "OpenNeisAPI4J-0.0.2.jar",
+          "size": 34809,
+          "sha512": "70029f37d906443fa8d3c7ac6c6d7e464adb95c551af687eb94be368c9433034c87bd30a495926c63f5f94e5e57eb2a4526e2acd5a455fefb207c1526a933218",
+          "sha256": "c6dfa99133337651f0bc8cd135469151ab2b0c0b1be423aca931c7f6c650f9ae",
+          "sha1": "b48e475430919d48bf0ab7bbf174ce501e95aaa9",
+          "md5": "0d12874732255efff428b3ca8e6093f9"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "OpenNeisAPI4J-0.0.2-sources.jar",
+          "url": "OpenNeisAPI4J-0.0.2-sources.jar",
+          "size": 20206,
+          "sha512": "54aa8171d37c22ce1ba000c51cdd5c1c980b2909ce627e827e9d959333dd5cdd8f20fab2ead6acbc858680cb3df0e6a69986e5c41d3562b1c40828e12084230e",
+          "sha256": "225e415e2119280853c5f564141449c1c857fb254f1ec95e6ca70036b0b9e45a",
+          "sha1": "7fbade2fa8d4dd01ff8b235ccaa178302a95ec52",
+          "md5": "12cf179554bb23aa83daba4d4e175e03"
+        }
+      ]
+    },
+    {
+      "name": "javadocElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "javadoc",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "OpenNeisAPI4J-0.0.2-javadoc.jar",
+          "url": "OpenNeisAPI4J-0.0.2-javadoc.jar",
+          "size": 182940,
+          "sha512": "88b598e8f3fe1da4f28407a85f21fc5e46b8be99012385a564811655b84ec6080fcc786bec6cc74a28505c54f59cf2968a6c36a094fa8a2439e944f60b7cd3df",
+          "sha256": "a1a31f3d8833e4968a21f4c09d5683630ee70026917305bd2cf249a0bd6d08bd",
+          "sha1": "f2ce6bace10eaeb0a29759776f7dc05c1c2283ab",
+          "md5": "60aedb5423a6b176f71e71ef67e693dd"
+        }
+      ]
+    }
+  ]
+}

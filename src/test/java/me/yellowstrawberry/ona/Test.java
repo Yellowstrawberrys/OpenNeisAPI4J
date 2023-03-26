@@ -16,7 +16,7 @@ public class Test {
     public static void main(String[] args) throws IOException {
         ONA ona = new ONA.Builder(args[0]).build();
 
-//        ElementarySchool dawon = (ElementarySchool) ona.searchSchool("강서초등학교", 1)[0];
-//        System.out.println(ona.getScheduleOfDay(dawon, 6, "1", Date.from(LocalDate.now().minusDays(2).atStartOfDay(ZoneId.systemDefault()).toInstant()))[0].getType());
+        ElementarySchool dawon = (ElementarySchool) ona.searchSchool("강서초등학교", 1)[0];
+        System.out.println(ona.getMealOfDay(dawon, Date.from(LocalDate.now().minusDays(2).atStartOfDay(ZoneId.systemDefault()).toInstant())).getOrigin()[0].getFrom());
     }
 }

@@ -14,6 +14,7 @@ import java.util.Date;
 
 /**
  * <strong>중학교</strong>
+ * @since 0.0.1
  * */
 public class MiddleSchool implements School {
     private String name;
