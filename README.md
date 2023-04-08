@@ -23,7 +23,7 @@ public class main {
         School school = ona.searchSchool("00초등학교")[0];
         
         //오늘 2학년 1반 첫 과목을 불러옴
-        Period period = ona.getScheduleOfDay(dawon, 2, "1", Date.from(LocalDate.now().atStartOfDay(ZoneId.systemDefault()).toInstant()))[0];
+        Period period = ona.getScheduleOfDay(school, 2, "1", Date.from(LocalDate.now().atStartOfDay(ZoneId.systemDefault()).toInstant()))[0];
         //과목 이름 출력
         System.out.println(period.getName());
     }
