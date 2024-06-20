@@ -45,7 +45,7 @@ public class HighSchool implements School {
             school.highSchoolType = HighSchoolType.parse(json.getString("HS_SC_NM"));
             school.hasIndustrySpecialClass = json.getString("INDST_SPECL_CCCCL_EXST_YN").equals("Y");
             school.generalBusinessType = json.getString("HS_GNRL_BUSNS_SC_NM");
-            school.specialPurposeType = json.getString("SPCLY_PURPS_HS_ORD_NM");
+            school.specialPurposeType = !json.isNull("SPCLY_PURPS_HS_ORD_NM")?json.getString("SPCLY_PURPS_HS_ORD_NM"):null;
             school.location = new Location(json.getString("LCTN_SC_NM"), json.getString("ORG_RDNMA"), json.getString("ORG_RDNDA"), Integer.parseInt(json.getString("ORG_RDNZC").replaceAll(" ", "")), json.getString("JU_ORG_NM"));
             school.contact = new Contact(json.getString("ORG_TELNO"), json.getString("ORG_FAXNO"), json.getString("HMPG_ADRES"));
             school.educationDepartment = new EducationDepartment(json.getString("ATPT_OFCDC_SC_CODE"), json.getString("ATPT_OFCDC_SC_NM"));

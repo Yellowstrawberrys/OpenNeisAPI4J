@@ -1,7 +1,7 @@
 package me.yellowstrawberry.openneisapi.objects.food;
 
 public class Origin {
-    private String name;
+    private final String name;
     private String from;
 
     /**
@@ -14,7 +14,7 @@ public class Origin {
     public Origin(String text) {
         String[] sts = text.split(" : ");
         this.name = sts[0];
-        this.from = sts[1];
+        if(sts.length==2) this.from = sts[1];
     }
 
     /**

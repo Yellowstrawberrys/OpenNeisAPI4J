@@ -12,7 +12,7 @@ public class SchoolMeal {
 
     private final Date date;
     private final String code;
-    private final int caterers;
+    private final float caterers;
 
 
     private final Food[] food;
@@ -24,13 +24,14 @@ public class SchoolMeal {
      * <strong>급식</strong>가져오기
      *
      * 급식 class
+     *
      * @since 0.0.2
      * */
     public SchoolMeal(JSONObject json) {
         try {
             date = School.format.parse(json.getString("MLSV_YMD"));
             code = json.getString("MMEAL_SC_CODE");
-            caterers = Integer.parseInt(json.getString("MLSV_FGR"));
+            caterers = json.getBigDecimal("MLSV_FGR").floatValue();
 
             food = parseFood(json.getString("DDISH_NM"));
             origin = parseOrigin(json.getString("ORPLC_INFO"));
@@ -97,7 +98,7 @@ public class SchoolMeal {
      * @return 인원수
      * @since 0.0.2
      * */
-    public int getCaterers() {
+    public float getCaterers() {
         return caterers;
     }
 

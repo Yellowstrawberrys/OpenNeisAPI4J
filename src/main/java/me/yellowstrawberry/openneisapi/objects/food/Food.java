@@ -1,8 +1,12 @@
 package me.yellowstrawberry.openneisapi.objects.food;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 public class Food {
     private final String name;
     private final Allergy[] allergies;
+    private static final Pattern pattern = Pattern.compile(".+ \\((.*)\\)");
 
     /**
      * <strong>음식</strong>
@@ -12,34 +16,22 @@ public class Food {
      * */
     public Food(String text) {
         String[] parsed = parse(text);
-
+        System.out.println(text);
         name = parsed[0];
         allergies = Allergy.parse(parsed[1]);
     }
 
     private String[] parse(String text) {
-        String[] a = new String[2];
-
-        int lastIndexOfFoodName = -1;
-
-        for (int i=text.lastIndexOf("("); i>0; i--) {
-            if(!isNumber(text.charAt(i))) {
-                lastIndexOfFoodName = i;
-                break;
-            }
-        }
-
-        a[0] = (lastIndexOfFoodName == -1 ? text : text.substring(0, lastIndexOfFoodName-1));
-        a[0] = a[0].substring(0, lastIndexFromEnd(a[0], ' '));
-        a[1] = (lastIndexOfFoodName == -1 ? null : text.substring(lastIndexOfFoodName+1, text.length()-1));
-        return a;
+        Matcher matcher = pattern.matcher(text);
+        if(matcher.find()) return new String[]{text, matcher.group(1)};
+        else return new String[]{text, null};
     }
 
     private int lastIndexFromEnd(String text, char c) {
         for(int i=text.lastIndexOf(c); i>0; i--) {
             if(text.charAt(i) != c) return i+1;
         }
-        return -1;
+        return text.length();
     }
 
     private boolean isNumber(char c) {
