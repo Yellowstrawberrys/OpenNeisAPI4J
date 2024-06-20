@@ -10,6 +10,27 @@
   <groupId>me.yellowstrawberry</groupId>
   <artifactId>OpenNeisAPI4J</artifactId>
   <version>0.0.3</version>
+  <name>Open Neis API</name>
+  <description>open.neis.go.kr api wrapper</description>
+  <url>https://api.yellowstrawberry.net/</url>
+  <licenses>
+    <license>
+      <name>The Apache License, Version 2.0</name>
+      <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+    </license>
+  </licenses>
+  <developers>
+    <developer>
+      <id>yellowstrawberry</id>
+      <name>Yellowstrawberry</name>
+      <email>root@yellowstrawberry.net</email>
+    </developer>
+  </developers>
+  <scm>
+    <connection>scm:git:git://github.com/Yellowstrawberrys/OpenNeisAPI4J.git</connection>
+    <developerConnection>scm:git:ssh://Yellowstrawberrys/OpenNeisAPI4J.git</developerConnection>
+    <url>https://github.com/Yellowstrawberrys/OpenNeisAPI4J</url>
+  </scm>
   <dependencies>
     <dependency>
       <groupId>com.squareup.okhttp3</groupId>

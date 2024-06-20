@@ -16,7 +16,6 @@ public class Food {
      * */
     public Food(String text) {
         String[] parsed = parse(text);
-        System.out.println(text);
         name = parsed[0];
         allergies = Allergy.parse(parsed[1]);
     }

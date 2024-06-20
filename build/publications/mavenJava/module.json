@@ -27,11 +27,11 @@
         {
           "name": "OpenNeisAPI4J-0.0.3.jar",
           "url": "OpenNeisAPI4J-0.0.3.jar",
-          "size": 34939,
-          "sha512": "8ab9a6eac555c5698aeb560d0363db9b7ef48296dd259d29e1ce5469d31bb4f649455fd55a0a4cbfe23cb06d6973819105da110c37f5c9d2431c7d93e533546c",
-          "sha256": "8cd208f7eaf72bd2d8783dec1d81b5a1d35657e5420541daae526150422ac4c4",
-          "sha1": "def7002888cc0200595100f9cf0f688e660e8b2d",
-          "md5": "7c583375d0a3f94cce4ac24ba1b62936"
+          "size": 35093,
+          "sha512": "ac1361d6c8dc609d08f737e0c8235721c47249f98f55c8004dacae819db9d10973982923ba4c089d98917794499a503e01d61aad674b727690ed85c3f48cf56c",
+          "sha256": "6658a5baa43fc576ca2a0a65bc72674e6ec83beacc3480fb16ca8606c26d0b66",
+          "sha1": "ee6b5e7d6ac6bdc843d3e77ce6e17980766bf93b",
+          "md5": "0128d7438d2e32cda784b8b7bd026805"
         }
       ]
     },
@@ -64,11 +64,11 @@
         {
           "name": "OpenNeisAPI4J-0.0.3.jar",
           "url": "OpenNeisAPI4J-0.0.3.jar",
-          "size": 34939,
-          "sha512": "8ab9a6eac555c5698aeb560d0363db9b7ef48296dd259d29e1ce5469d31bb4f649455fd55a0a4cbfe23cb06d6973819105da110c37f5c9d2431c7d93e533546c",
-          "sha256": "8cd208f7eaf72bd2d8783dec1d81b5a1d35657e5420541daae526150422ac4c4",
-          "sha1": "def7002888cc0200595100f9cf0f688e660e8b2d",
-          "md5": "7c583375d0a3f94cce4ac24ba1b62936"
+          "size": 35093,
+          "sha512": "ac1361d6c8dc609d08f737e0c8235721c47249f98f55c8004dacae819db9d10973982923ba4c089d98917794499a503e01d61aad674b727690ed85c3f48cf56c",
+          "sha256": "6658a5baa43fc576ca2a0a65bc72674e6ec83beacc3480fb16ca8606c26d0b66",
+          "sha1": "ee6b5e7d6ac6bdc843d3e77ce6e17980766bf93b",
+          "md5": "0128d7438d2e32cda784b8b7bd026805"
         }
       ]
     },
@@ -84,11 +84,11 @@
         {
           "name": "OpenNeisAPI4J-0.0.3-sources.jar",
           "url": "OpenNeisAPI4J-0.0.3-sources.jar",
-          "size": 20107,
-          "sha512": "4860ea6bcd584fa7a35f6e1751c69ca796c37542169c8bf1f6846bbe3fb96117a5b77daae41580039b1d98a5fe0937600e632cb33860b50707e4c408a6b548df",
-          "sha256": "bcc8c89e5addc3a6cb3a237f2e36ce167b789d51cab99e8ae0715d4e9cf8997f",
-          "sha1": "f1c35a1d6b0160606b22394ff9ad901b937d2076",
-          "md5": "6024aa300c630a8196ed769a3ae92683"
+          "size": 20278,
+          "sha512": "7037dfc8f20b6520b685c8fe2c747aa93ab55332cfefa7e52561a24cff411d86cccd7dee3c080d6cfba799bf41edb8dd3962454e497d4caba53ecbfeea9a6454",
+          "sha256": "74c818c569947484b1dd8a90f91a6e8c20bc44a246b4ba7153009ef74f6ad85e",
+          "sha1": "3ede4742b473d201ce75d70a9c99e0100194f1b2",
+          "md5": "4db9b627f46cb2fd07562c717c19189c"
         }
       ]
     },
@@ -104,11 +104,11 @@
         {
           "name": "OpenNeisAPI4J-0.0.3-javadoc.jar",
           "url": "OpenNeisAPI4J-0.0.3-javadoc.jar",
-          "size": 191268,
-          "sha512": "ff9ca878d8be5117a6973d5821ffa2559902c5f9eaefb668446ef148572484a6ab49142a8c87565c8a205c5666e43112d51826fee9acdbeab896981962958230",
-          "sha256": "6cfdc9fb29ac8b564bf5f1580949e9d47ff4e9233abcdd95b6885e20f0db7975",
-          "sha1": "4ad10b084c683af9337f2604334027f8730d5800",
-          "md5": "760c1b5ea9386f0a5223c072976168fe"
+          "size": 183026,
+          "sha512": "e2711a6b1fa7a62d5e0636781d33a6642971c2ac9df0b313d29103ceb10030474845fe6d299d5f0c306f34989fcc2c7ef6713bba5f417f3c21553e07f0db7701",
+          "sha256": "c9be0d2a8c2eb68ba400ad1b097e854e26fda61f8eb688e30c9acb13eadd9f06",
+          "sha1": "a48daf368a91a6abe10564eded5f47605805269d",
+          "md5": "cf95675daf5bd14b034fee6095a435bd"
         }
       ]
     }

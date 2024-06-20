@@ -5,7 +5,7 @@ plugins {
 }
 
 group 'me.yellowstrawberry'
-version '0.0.3'
+version '0.0.4'
 
 publishing {
     publications {
@@ -15,7 +15,7 @@ publishing {
                 name = 'Open Neis API'
                 packaging = 'jar'
                 description = 'open.neis.go.kr api wrapper'
-                url = 'https://api.yellowstrawberry.me/'
+                url = 'https://api.yellowstrawberry.net/'
                 licenses {
                     license {
                         name = 'The Apache License, Version 2.0'
@@ -26,7 +26,7 @@ publishing {
                     developer {
                         id = 'yellowstrawberry'
                         name = 'Yellowstrawberry'
-                        email = 'eunsoo3009@hotmail.com'
+                        email = 'root@yellowstrawberry.net'
                     }
                 }
                 scm {
@@ -42,8 +42,8 @@ publishing {
             name = "OSSRH"
             url = "https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/"
             credentials {
-                username = project.property('ossrhUsername')
-                password = project.property('ossrhPassword')
+                username = findProperty("ossrhUsername")
+                password = findProperty('ossrhPassword')
             }
         }
     }

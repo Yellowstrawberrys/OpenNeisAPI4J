@@ -48,7 +48,6 @@ public enum Allergy {
     public static Allergy[] parse(String st) {
         if(st == null) return null;
         List<Allergy> allergies = new ArrayList<>();
-        System.out.println(st);
         String[] sts = st.split("\\.");
         for(String st1 : sts) {
             allergies.add(parse(Integer.parseInt(st1)));
